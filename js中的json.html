@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //---------------------------------josn---------------------------------------  
+    //json和对象（对象字面量）的区别仅仅在于，json的key键值对中的键必须带有“”；  
+    //对象本身没有length,所以不能用for循环遍历  
+    //json的key值不能修改  
+/*    var json = {"name":"拴住","age":18,"arr":[1,2,3]};
+    for(var key in json){
+        console.log(key); //属性名：name  
+        console.log(json[key]); //属性值：拴住  
+        if(key === "age"){ //修改josn中指定属性值  
+            json[key] = 20;
+        }
+    }
+    json.性别="男"; // json 添加属性  
+    json["爱好"]="lol"; // json 添加属性  
+    console.log(json);*/
+
+    //json对象转字符串  
+    var json1 = {"name":11,"sex":"男","age":12}; //必须是标准的josn结构
+    var jsonStr = JSON.stringify(json1);
+    console.log(jsonStr);
+
+    //json串转json对象  
+    var json3 = '{"name":11,"sex":"男","age":12}';
+    var jsonObj = JSON.parse(json3);
+    console.log(jsonObj);
+
+</script>
+</body>
+</html>  

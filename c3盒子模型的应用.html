@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .a {
+            margin: 0 auto;
+            width: 230px;
+        }
+        li:first-child {
+            background: url("images/1.jpg");
+            width: 230px;
+            height: 230px;
+            list-style: none;
+            transition: all .3s linear;
+            box-sizing: border-box;
+        }
+        li:first-child:hover{
+            border: 9px solid orangered;
+        }
+        li:nth-child(2){
+            list-style: none;
+            float: left;
+            width: 230px;
+            height: 230px;
+            transition: all .3s linear;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        li:nth-child(2):hover{
+            border: 9px solid orangered;
+        }
+    </style>
+</head>
+<body>
+<div class="a">
+    <ul>
+        <li>图片以背景形式存在
+        </li>
+        <li>图片以img形式存在
+            <img src="images/2.jpg" alt=""/>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

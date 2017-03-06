@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <h1>onclick事件会覆盖 而addEventListener都会执行</h1><br>
+    <p>var btn =document.getElementById("btn");<br>
+    btn.onclick=function(){<br>
+    alert("点击按钮触发的事件onclick")<br>
+    }<br>
+    btn.onclick=function(){<br>
+    alert("第二次定义的onclik事件")<br>
+    }<br>
+    btn.addEventListener("click",function(){<br>
+    alert("第一次触发addEventListener事件");<br>
+    });<br>
+    btn.addEventListener("click",function(){<br>
+    alert("第二次触发addEventListener事件");<br>
+    });</p>
+</div>
+<button id="btn">点击查看onclick 和 addEventListener的区别</button>
+<script>
+    //onclick事件会覆盖 而addEventListener都会执行
+    var btn =document.getElementById("btn");
+    btn.onclick=function(){
+        alert("点击按钮触发的事件onclick")
+    }
+    btn.onclick=function(){
+        alert("第二次定义的onclik事件")
+    }
+    btn.addEventListener("click",function(){
+        alert("第一次触发addEventListener事件");
+    });
+    btn.addEventListener("click",function(){
+        alert("第二次触发addEventListener事件");
+    });
+    var divs = document.getElementsByTagName("div");
+    divs[0].innerText;
+</script>
+</body>
+</html>

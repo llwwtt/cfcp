@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /*position: absolute;*/
+            /*left: 100px;*/
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+<div id="box" style="left: 100px;margin-left: 500px;"></div>
+<script>
+    var box = document.getElementById("box");
+    console.log(box.offsetLeft);
+    console.log(box.style.left);
+</script>
+</body>
+</html>

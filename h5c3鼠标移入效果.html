@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            margin-left: 200px;
+            margin-top: 100px;
+        }
+        li {
+            float: left;
+            height: 230px;
+            width: 230px;
+            margin-right: 20px;
+            list-style: none;
+            overflow: hidden;
+            position: relative;
+            transition: all .3s linear;
+        }
+        span {
+            display: inline-block;
+            width: 230px;
+            height: 50px;
+            background: orangered;
+            position: absolute;
+            bottom: -50px;
+            transition: all .3s linear;
+        }
+        li:hover {
+            box-shadow: 0px 0px 10px #ccc;
+            margin-top: -5px;
+        }
+        li:hover span{
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li>
+            <img src="images/1.jpg" alt=""/>
+        </li>
+        <li>
+            <img src="images/2.jpg" alt=""/>
+            <span></span>
+        </li>
+        <li>
+            <img src="images/6.jpg" alt=""/>
+            <span></span>
+        </li>
+        <li>
+            <img src="images/8.jpg" alt=""/>
+            <span></span>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

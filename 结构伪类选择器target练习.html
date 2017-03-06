@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        #d1 {
+            background: #ff596a;
+        }
+        #d2 {
+            background: #29ffc7;
+        }
+        #d3 {
+            background: #fff47e;
+        }
+        #d4 {
+            background: #a67fff;
+        }
+        ol {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -100px;
+            z-index: 99;
+        }
+        li {
+            list-style: none;
+            float: left;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #fff;
+            margin-right: 10px;
+
+        }
+        li:first-child {
+            background: #ff596a;
+        }
+        li:nth-child(2) {
+            background: #29ffc7;
+        }
+        li:nth-child(3) {
+            background: #fff47e;
+        }
+        li:nth-child(4) {
+            background: #a67fff;
+        }
+        div:target {
+            z-index: 9;
+        }
+        li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+<div id="d4"></div>
+<ol>
+    <li><a href="#d1"></a></li>
+    <li><a href="#d2"></a></li>
+    <li><a href="#d3"></a></li>
+    <li><a href="#d4"></a></li>
+</ol>
+</body>
+</html>

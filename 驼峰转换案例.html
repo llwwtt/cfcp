@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+ <script>
+     //已知有字符串foo="get-element-by-id",写一个function将其转化成驼峰表示法"getElementById"
+     function change(foo){
+         var arr=foo.split("-");//通过分隔符把元素转换为数组形式[get,element,by,id]
+         for(var i=1;i<arr.length;i++){//让数组从第一个开始遍历转换大写（因为第一个字母不需要大写）
+             arr[i]=arr[i].charAt(0).toUpperCase()+arr[i].substr(1,arr[i].length-1);
+             //arr[i].charAt(0);是指数组中第i个元素的索引为0的字符串 也就是首字母
+             //arr[i].substr(1,arr[i].length-1)指从索引为1开始截取arr[i].length-1个字符串
+             //也就是数组中某个元素首字母后面的字符串
+         }//转换后变成[get,Element,By,Id]
+         return arr.join("");//将数组转换成字符串 以""作为分隔符
+     }
+     console.log(change("get-element-by-id"));
+     console.log(change("hello-my-dear-baby"));
+     /**
+      * 封装了一个将字符串转换为驼峰命名的函数
+      * @type {{change: Function}}
+      */
+     var o = {
+         change: function change(foo) {
+             var arr = foo.split("-");//通过分隔符把元素转换为数组形式[get,element,by,id]
+             for (var i = 1; i < arr.length; i++) {
+                 arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substr(1, arr[i].length - 1)
+             }
+             return arr.join("");
+         }
+     }
+     console.log(o.change("my-heart-will-go-on"));
+     console.log(o.change("ha-ha-ha-ha"));
+
+ </script>
+</body>
+</html>

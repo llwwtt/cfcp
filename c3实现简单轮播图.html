@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 230px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+            border: 1px solid orangered;
+        }
+        li{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            background: #ccc;
+            color: #00b0e0;
+            border-radius: 50%;
+            list-style: none;
+            float: left;
+            text-align: center;
+            margin-right: 10px;
+        }
+        li a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-decoration: none;
+            color: #0073b3;
+        }
+        li:hover {
+            background: orangered;
+        }
+        img {
+            position: absolute;
+        }
+        img:target {
+            z-index: 9;
+        }
+        ol {
+            width: 230px;
+            position: absolute;
+            bottom: 20px;
+            left: 40px;
+            z-index: 3;
+
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img id="img1" src="images/1.jpg" alt=""/>
+    <img id="img2" src="images/2.jpg" alt=""/>
+    <img id="img3" src="images/6.jpg" alt=""/>
+    <img id="img4" src="images/8.jpg" alt=""/>
+    <ol>
+        <li><a href="#img1">1</a></li>
+        <li><a href="#img2">2</a></li>
+        <li><a href="#img3">3</a></li>
+        <li><a href="#img4">4</a></li>
+    </ol>
+</div>
+</body>
+</html>

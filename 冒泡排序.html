@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //将数组中的元素按从小到大的顺序排列出来
+   /* var arr=[6,4,5,2,7,9];
+    for(var i=0;i<arr.length-1;i++){//外层循环控制趟数 有几个数就需要多少趟 由于从0开始 所以arr.length-1
+        for(var j=0;j<arr.length-1-i;j++){//控制两两比较的次数 由于排完一个少一个 所以要-i
+            if(arr[j]>arr[j+1]){//如果第一个数大于第二个就互相交换 是从小到大排
+                var temp = arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;//交换完成
+            }
+        }
+    }
+    console.log(arr);*/
+    //*********************************************************************************************
+    //写一个冒泡排序的函数
+   /*  function sort(arr){
+         for(var i=0;i<arr.length-1;i++){
+             for(var j=0;j<arr.length-1-i;j++){
+                 if(arr[j]>arr[j+1]){
+                     var temp = arr[j];
+                     arr[j]=arr[j+1];
+                     arr[j+1]=temp;
+                 }
+             }
+         }
+         return arr;
+     }
+    console.log(sort([5, 8, 3, 4, 9, 1]));*/
+    //*********************************************************************************************
+    //将冒泡排序的函数封装
+    /**
+     * 封装了一个冒泡泡排序的函数
+     * @type {{sort: Function}}
+     */
+   /* var o ={
+        sort:function sort(arr){
+            for(var i=0;i<arr.length-1;i++){
+                for(var j=0;j<arr.length-1-i;j++){
+                    if(arr[j]>arr[j+1]){
+                        var temp = arr[j];
+                        arr[j]=arr[j+1];
+                        arr[j+1]=temp;
+                    }
+                }
+            }
+            return arr;
+        }
+    }
+    console.log(o.sort([4, 3, 24, 5, 76]));*/
+    //*********************************************************************************************
+    //写一个带有标志的冒泡排序程序
+//    var arr=[10,60,30,40,50,7];
+/*    var arr=[1,2,3,4,5,6];
+    for(var i=0;i<arr.length-1;i++){
+        var flag = true;
+        for(var j=0;j<arr.length-1-i;j++){
+            if(arr[j]>arr[j+1]){
+                flag=false;
+                var temp = arr[j+1];
+                arr[j+1]=arr[j];
+                arr[j]=temp;
+            }
+        }
+        if(flag){
+            break;
+        }
+    }
+    console.log(arr);
+    console.log(flag);*/
+</script>
+
+</body>
+</html>

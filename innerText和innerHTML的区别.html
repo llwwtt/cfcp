@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+        <h3>innerText 低版本火狐不支持</h3>
+        <h3>textContent 低版本火狐支持</h3>
+        <h3>innerHTML 都支持</h3>
+     <h5>当向标签中设置内容时</h5>
+    <p>var hehe = document.getElementById("hehe");</p>
+    <p>hehe.<b>innerText</b>="&lt;p&gt;今天天气真好&lt;p&gt;";//&lt;p&gt;今天天气真好&lt;p&gt;</p>
+    <p>hehe.<b>innerHTML</b>="&lt;p&gt;今天天气真好&lt;/p&gt;";//今天天气真好</p>
+    <h5>当要获取标签中内容时</h5>
+    <p>var haha=document.getElementById("haha");</p>
+    <p>console.log(haha.<b>innerText</b>);//哈哈哈</p>
+    <p>console.log(haha.<b>innerHTML</b>);//&lt;p&gt;哈哈哈&lt;/p&gt;</p>
+</div>
+<span id="hehe"></span>
+<div id="haha"><p>哈哈哈</p></div>
+<script>
+   /* innerText 低版本火狐不支持
+    textContent 低版本火狐支持
+    innerHTML 都支持*/
+    //************************************************************************************
+    //当向标签中设置内容时
+//    var hehe = document.getElementById("hehe");
+//    hehe.innerText="<p>今天天气真好</p>";//<p>今天天气真好</p>
+//    hehe.innerHTML="<p>今天天气真好</p>";//今天天气真好
+    //************************************************************************************
+    //当要获取标签中内容时
+   /* var haha=document.getElementById("haha");
+    console.log(haha.innerText);//哈哈哈
+    console.log(haha.innerHTML);//<p>哈哈哈</p>*/
+</script>
+</body>
+</html>

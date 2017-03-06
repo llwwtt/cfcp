@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" id="txt" class="txt2" aaa="bbb"/>
+<script>
+   /* 点语法和getAttribute的区别
+    ①使用getAttribute可以获取HTML标签中任意的属性（包括规范属性和自定义属性），
+    但不能获得在DOM对象中自定义的属性。(getAttribute不能获得通过.定义的属性)
+    ②使用点语法可以获取DOM对象的属性。
+    DOM会将HTML元素在JavaScript中表示为对象，
+    标签的规范属性将作为DOM对象的属性存在，
+    标签的自定义属性则不映射在DOM对象中，（通过.方法不能获得标签行内定义的属性）
+    因此点语法不能获得标签的自定义属性。*/
+
+
+//    getAttribute能获得什么? 行内自带和行内设置的属性、setAttribute设置的属性
+//    .的属性能获得什么? 行内自带的和dom中自定义的属性
+   var one = document.getElementById("txt");
+   one.index = 3; //dom对象的自定义属性  点语法是可以获取到的但是getAttribute不可以
+   console.log(one.index);//3
+   console.log(one.getAttribute("index"));//null
+   console.log(one.aaa);//undefined
+   console.log(one.getAttribute("aaa"));//bbb  aaa为标签的自定义属性
+</script>
+</body>
+</html>
